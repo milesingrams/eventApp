@@ -3,13 +3,26 @@
 (function() {
 
   class RegisterController {
-    constructor($state) {
+    constructor($http, $state) {
 
       var ctrl = this;
+
+      ctrl.email = '';
+      ctrl.password = '';
+      ctrl.name = '';
+      ctrl.userExists = true;
 
       ctrl.goWelcome = function () {
         $state.go('main.welcome');
       }
+
+      ctrl.checkEmail = function () {
+        if (ctrl.email) {
+          $http.get('/api/utils/checkEmail', {params: {email: ctrl.email}}).success(response => {
+            ctrl.userExists = response;
+          });
+        }
+      };
 
     }
   }

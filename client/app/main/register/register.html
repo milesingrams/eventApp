@@ -2,15 +2,15 @@
   <h1 class="page-name">Sign In or Register</h1>
   <div class="login-inputs">
     <div class="login-input-wrap">
-      <input id="email-input" type="email" class="login-input input-outline" />
+      <input id="email-input" type="email" class="login-input input-outline" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()"/>
       <label class="login-input-label" for="email-input">Email</label>
     </div>
     <div class="login-input-wrap">
-      <input id="password-input" type="password" class="login-input input-outline" />
+      <input id="password-input" type="password" class="login-input input-outline" ng-model="registerCtrl.password"/>
       <label class="login-input-label" for="password-input">Password</label>
     </div>
-    <div class="login-input-wrap">
-      <input id="name-input" type="text" class="login-input input-outline" />
+    <div class="login-input-wrap" ng-if="!registerCtrl.userExists">
+      <input id="name-input" type="text" class="login-input input-outline" ng-model="registerCtrl.name"/>
       <label class="login-input-label" for="name-input">Name</label>
     </div>
     <div class="login-input-wrap">
