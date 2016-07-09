@@ -30,7 +30,8 @@ const paths = {
             `${clientPath}/**/!(*.spec|*.mock).js`,
             `!${clientPath}/bower_components/**/*`
         ],
-        styles: [`${clientPath}/{app,components}/**/*.scss`],
+        injectedStyles: [`${clientPath}/{app,components}/**/*.scss`],
+        styles: [`${clientPath}/{styles,app,components}/**/*.scss`],
         mainStyle: `${clientPath}/app/app.scss`,
         views: `${clientPath}/{app,components}/**/*.html`,
         mainView: `${clientPath}/index.html`,
@@ -233,7 +234,7 @@ gulp.task('inject:css', () => {
 gulp.task('inject:scss', () => {
     return gulp.src(paths.client.mainStyle)
         .pipe(plugins.inject(
-            gulp.src(_.union(paths.client.styles, ['!' + paths.client.mainStyle]), {read: false})
+            gulp.src(_.union(paths.client.injectedStyles, ['!' + paths.client.mainStyle]), {read: false})
                 .pipe(plugins.sort()),
             {
                 transform: (filepath) => {

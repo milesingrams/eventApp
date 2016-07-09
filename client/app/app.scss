@@ -3,11 +3,6 @@
 /**
  * App-wide Styles
  */
- 
- @import '../styles/variables';
- @import '../styles/structure';
- @import '../styles/typography';
- @import '../styles/buttons';
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -26,7 +21,6 @@
 // Component styles are injected through grunt
 /* inject:scss */
 @import 'admin/admin';
-@import 'event';
 @import 'main/main';
 @import '../components/oauth-buttons/oauth-buttons';
 /* endinject */
