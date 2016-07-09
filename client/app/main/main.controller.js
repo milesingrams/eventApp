@@ -3,15 +3,14 @@
 (function() {
 
   class MainController {
-    constructor($http, $scope) {
+    constructor() {
 
       var ctrl = this;
 
-      ctrl.signInToggled = false;
     }
   }
 
-  angular.module('eventAppApp')
+  angular.module('eventApp')
     .component('main', {
       templateUrl: 'app/main/main.html',
       controller: MainController

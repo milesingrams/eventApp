@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

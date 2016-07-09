@@ -185,6 +185,6 @@
     return Auth;
   }
 
-  angular.module('eventAppApp.auth')
+  angular.module('eventApp.auth')
     .factory('Auth', AuthService);
 })();

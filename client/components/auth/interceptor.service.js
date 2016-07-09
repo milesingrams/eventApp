@@ -27,6 +27,6 @@
     };
   }
 
-  angular.module('eventAppApp.auth')
+  angular.module('eventApp.auth')
     .factory('authInterceptor', authInterceptor);
 })();

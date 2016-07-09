@@ -29,5 +29,5 @@ class LoginController {
   }
 }
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .controller('LoginController', LoginController);

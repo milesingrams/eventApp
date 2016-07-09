@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventAppApp.auth', ['eventAppApp.constants', 'eventAppApp.util', 'ngCookies',
+angular.module('eventApp.auth', ['eventApp.constants', 'eventApp.util', 'ngCookies',
     'ui.router'
   ])
   .config(function($httpProvider) {

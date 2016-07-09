@@ -65,6 +65,6 @@
     return Util;
   }
 
-  angular.module('eventAppApp.util')
+  angular.module('eventApp.util')
     .factory('Util', UtilService);
 })();

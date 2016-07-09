@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventAppApp.admin')
+angular.module('eventApp.admin')
   .config(function($stateProvider) {
     $stateProvider.state('admin', {
       url: '/admin',

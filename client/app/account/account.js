@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .config(function($stateProvider) {
     $stateProvider.state('login', {
         url: '/login',

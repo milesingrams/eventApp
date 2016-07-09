@@ -23,5 +23,5 @@ class SettingsController {
   }
 }
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .controller('SettingsController', SettingsController);

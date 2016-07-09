@@ -37,5 +37,5 @@ class SignupController {
   }
 }
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .controller('SignupController', SignupController);

@@ -12,5 +12,5 @@ class NavbarController {
 
 }
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .controller('NavbarController', NavbarController);

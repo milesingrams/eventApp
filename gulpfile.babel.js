@@ -516,7 +516,7 @@ gulp.task('build:client', ['styles', 'html', 'constant', 'build:images'], () => 
 gulp.task('html', function() {
     return gulp.src(`${clientPath}/{app,components}/**/*.html`)
         .pipe(plugins.angularTemplatecache({
-            module: 'eventAppApp'
+            module: 'eventApp'
         }))
         .pipe(gulp.dest('.tmp'));
 });
@@ -524,7 +524,7 @@ gulp.task('html', function() {
 gulp.task('constant', function() {
   let sharedConfig = require(`./${serverPath}/config/environment/shared`);
   return plugins.ngConstant({
-    name: 'eventAppApp.constants',
+    name: 'eventApp.constants',
     deps: [],
     wrap: true,
     stream: true,

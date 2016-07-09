@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('eventAppApp.admin', ['eventAppApp.auth', 'ui.router']);
+angular.module('eventApp.admin', ['eventApp.auth', 'ui.router']);

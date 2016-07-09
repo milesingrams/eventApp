@@ -1,5 +1,5 @@
 (function(angular, undefined) {
-  angular.module("eventAppApp.constants", [])
+  angular.module("eventApp.constants", [])
 
 .constant("appConfig", {
 	"userRoles": [

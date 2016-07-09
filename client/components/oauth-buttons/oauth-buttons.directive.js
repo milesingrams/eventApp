@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventAppApp')
+angular.module('eventApp')
   .directive('oauthButtons', function() {
     return {
       templateUrl: 'components/oauth-buttons/oauth-buttons.html',
