@@ -1,13 +1,18 @@
 .button-outline {
   height: 40px;
   padding: 10px 20px;
-  line-height: 20px;
+  line-height: 1;
   border: 1px solid $gray;
   border-radius: 20px;
   display: block;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
+  &:hover {
+    background-color: $blue;
+    color: white;
+    border: none;
+  }
 }
 
 .input-outline {
