@@ -1,0 +1,54 @@
+.login-inputs {
+  margin-top: 50px;
+}
+
+.login-input-wrap {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.login-input-label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 20px;
+  padding: 0 5px;
+  background-color: white;
+  color: $gray;
+
+  font-weight: 300;
+  cursor: text;
+  transition: all .2s ease-in-out;
+}
+
+.login-input {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  transition: all .2s ease-in-out;
+  &:invalid {
+    + .login-input-label {
+      top: 9px;
+    }
+  }
+  &:focus {
+    + .login-input-label {
+      top: -10px;
+      color: $blue;
+    }
+  }
+}
+
+.login-buttons, .register-buttons {
+  margin-top: 100px;
+  .ea-button {
+    display: inline-block;
+    width: 180px;
+  }
+}
