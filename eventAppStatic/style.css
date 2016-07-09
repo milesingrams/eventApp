@@ -1,0 +1,119 @@
+h1, h2 {
+  text-align: center;
+  margin: 0; }
+
+.button-outline {
+  height: 40px;
+  padding: 10px 20px;
+  line-height: 20px;
+  border: 1px solid #a0a0a0;
+  border-radius: 20px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent; }
+
+.input-outline {
+  height: 40px;
+  padding: 10px 20px;
+  line-height: 20px;
+  border: 1px solid #a0a0a0;
+  border-radius: 20px;
+  background-color: transparent; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  overflow: hidden; }
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px; }
+
+.page-name {
+  padding-top: 70px;
+  margin-bottom: 20px;
+  opacity: 0.8; }
+
+.page-description {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.25;
+  opacity: 0.8; }
+
+.login-buttons {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .login-buttons .button-outline {
+    display: inline-block;
+    width: 160px; }
+  .login-buttons .create-event-button {
+    margin-right: 20px; }
+
+.login-input-wrap {
+  position: relative;
+  width: 400px;
+  margin: 0 auto; }
+
+.login-input-label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  color: #a0a0a0;
+  font-weight: 300;
+  cursor: text;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.login-input {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%; }
+  .login-input:focus ~ .login-input-label {
+    width: 20%; }
+
+.event-wrap {
+  min-height: 100vh; }
+
+.event-header {
+  position: relative; }
+
+.event-image-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  height: 400px; }
+
+.event-image-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.65) 0%, white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.65) 0%, white 100%); }
+
+.event-image {
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%); }
