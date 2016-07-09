@@ -1,4 +1,15 @@
-.button-outline {
+.ea-button {
+  height: 40px;
+  padding: 10px 20px;
+  line-height: 1;
+  &:hover {
+    background-color: $blue;
+    color: white;
+    border: none;
+  }
+}
+
+.ea-button-outline {
   height: 40px;
   padding: 10px 20px;
   line-height: 1;
@@ -8,11 +19,6 @@
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  &:hover {
-    background-color: $blue;
-    color: white;
-    border: none;
-  }
 }
 
 .input-outline {
@@ -22,4 +28,17 @@
   border: 1px solid $gray;
   border-radius: 20px;
   background-color: transparent;
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+//BUTTON GROUPING
+
+.button-group-center {
+  display: flex;
+  justify-content: center;
+  .ea-button {
+    margin: 0 10px;
+  }
 }

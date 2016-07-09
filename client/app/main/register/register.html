@@ -2,19 +2,20 @@
   <h1 class="page-name">Sign In or Register</h1>
   <div class="login-inputs">
     <div class="login-input-wrap">
-      <input id="email-input" type="email" class="login-input input-outline" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()"/>
+      <input id="email-input" type="email" class="login-input input-outline" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()" required/>
       <label class="login-input-label" for="email-input">Email</label>
     </div>
     <div class="login-input-wrap">
-      <input id="password-input" type="password" class="login-input input-outline" ng-model="registerCtrl.password"/>
+      <input id="password-input" type="password" class="login-input input-outline" ng-model="registerCtrl.password" required/>
       <label class="login-input-label" for="password-input">Password</label>
     </div>
     <div class="login-input-wrap" ng-if="!registerCtrl.userExists">
-      <input id="name-input" type="text" class="login-input input-outline" ng-model="registerCtrl.name"/>
+      <input id="name-input" type="text" class="login-input input-outline" ng-model="registerCtrl.name" required/>
       <label class="login-input-label" for="name-input">Name</label>
     </div>
-    <div class="login-input-wrap">
-      <button class="button-outline sign-in-button" ng-click="registerCtrl.goWelcome()">Back</button>
+    <div class="register-buttons button-group-center">
+      <button class="ea-button ea-button-outline back-button" ng-click="registerCtrl.goWelcome()">Back</button>
+      <button class="ea-button ea-button-outline register-button" ng-click="registerCtrl.goWelcome()">Go!</button>
     </div>
   </div>
 </div>
