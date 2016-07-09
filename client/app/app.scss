@@ -1,4 +1,4 @@
-
+@import 'client/bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
 
 /**
  * App-wide Styles
@@ -22,6 +22,5 @@
 /* inject:scss */
 @import 'admin/admin';
 @import 'main/main';
-@import '../components/footer/footer';
 @import '../components/oauth-buttons/oauth-buttons';
 /* endinject */
