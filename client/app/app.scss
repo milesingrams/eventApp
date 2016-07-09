@@ -4,6 +4,11 @@
  * App-wide Styles
  */
 
+ @import '../styles/variables';
+ @import '../styles/structure';
+ @import '../styles/typography';
+ @import '../styles/buttons';
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
