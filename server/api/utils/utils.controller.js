@@ -18,9 +18,9 @@ export function checkEmail(req, res, next) {
   return User.findOne({email: email}).exec()
     .then(user => {
       if (user) {
-        res.json(true);
+        return res.json(true);
       } else {
-        res.json(false);
+        return res.json(false);
       }
     })
     .catch(err => {
