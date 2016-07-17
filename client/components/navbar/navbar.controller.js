@@ -1,12 +1,17 @@
 'use strict';
 
 class NavbarController {
-  constructor (Auth) {
+  constructor ($state, Auth) {
 
     let ctrl = this;
     ctrl.isLoggedIn = Auth.isLoggedIn;
     ctrl.getCurrentUser = Auth.getCurrentUser;
-    ctrl.logout = Auth.logout;
+
+
+    ctrl.logout = function () {
+      Auth.logout();
+      $state.go('main.welcome');
+    };
   }
 }
 

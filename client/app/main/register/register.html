@@ -1,5 +1,5 @@
 <h1 class="page-name">Sign In or Register</h1>
-<form class="login-inputs" name="form" ng-submit="registerCtrl.go(form)" novalidate>
+<form class="login-inputs" name="form" ng-submit="registerCtrl.submit(form)" novalidate>
   <div class="login-input-wrap">
     <input id="email-input" type="email" name="email" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.email.$error)}" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()" required/>
     <label class="login-input-label" for="email-input">Email</label>
@@ -22,7 +22,7 @@
     We noticed you are new here, thanks for joining EventApp!
   </p>
   <div class="register-buttons button-group-center">
-    <button class="ea-button ea-button back-button" ng-click="registerCtrl.goWelcome()">Back</button>
+    <button class="ea-button ea-button back-button" ng-click="registerCtrl.go('main.welcome')">Back</button>
     <button class="ea-button ea-button register-button" type="submit" ng-disabled="form.$invalid">Go!</button>
   </div>
 </form>

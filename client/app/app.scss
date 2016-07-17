@@ -13,6 +13,7 @@
 // Component styles are injected through grunt
 /* inject:scss */
 @import 'events/events';
+@import 'events/eventsEdit';
 @import 'main/main';
 @import 'main/register/register';
 @import 'main/welcome/welcome';

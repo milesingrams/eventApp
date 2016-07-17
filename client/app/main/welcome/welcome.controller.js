@@ -6,10 +6,7 @@
     constructor($state) {
 
       let ctrl = this;
-
-      ctrl.goRegister = function () {
-        $state.go('main.register');
-      }
+      ctrl.go = $state.go;
 
     }
   }

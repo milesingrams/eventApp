@@ -7,16 +7,14 @@
 
       let ctrl = this;
 
+      ctrl.go = $state.go;
+
       ctrl.email = 'test@example.com';
       ctrl.password = 'test123';
       ctrl.name = '';
       ctrl.userExists = true;
       ctrl.submitted = false;
       ctrl.errorMessage = null;
-
-      ctrl.goWelcome = function () {
-        $state.go('main.welcome');
-      };
 
       ctrl.checkEmail = function () {
         if (ctrl.email) {
@@ -30,7 +28,7 @@
         return Object.keys(object).length === 0;
       };
 
-      ctrl.go = function (form) {
+      ctrl.submit = function (form) {
         ctrl.submitted = true;
 
         if (ctrl.userExists) {
