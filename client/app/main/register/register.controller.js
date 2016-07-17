@@ -7,8 +7,8 @@
 
       let ctrl = this;
 
-      ctrl.email = '';
-      ctrl.password = '';
+      ctrl.email = 'test@example.com';
+      ctrl.password = 'test123';
       ctrl.name = '';
       ctrl.userExists = true;
       ctrl.submitted = false;

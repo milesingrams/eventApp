@@ -21,6 +21,7 @@
        * @return {Promise}
        */
       login({email, password}, callback) {
+
         return $http.post('/auth/local', {
             email: email,
             password: password
@@ -182,6 +183,6 @@
     return Auth;
   }
 
-  angular.module('eventApp.auth')
+  angular.module('eventApp')
     .factory('Auth', AuthService);
 })();

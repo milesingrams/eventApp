@@ -21,6 +21,6 @@
     });
   }
 
-  angular.module('eventApp.auth')
+  angular.module('eventApp')
     .factory('User', UserResource);
 })();

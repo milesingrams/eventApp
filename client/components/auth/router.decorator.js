@@ -2,7 +2,7 @@
 
 (function() {
 
-  angular.module('eventApp.auth')
+  angular.module('eventApp')
     .run(function($rootScope, $state, Auth) {
       // Redirect to login if route requires auth and the user is not logged in, or doesn't have required role
       $rootScope.$on('$stateChangeStart', function(event, next) {
@@ -20,7 +20,7 @@
               event.preventDefault();
               return Auth.isLoggedIn(_.noop)
                 .then(is => {
-                  $state.go(is ? 'main' : 'login');
+                  $state.go(is ? 'main.welcome' : 'main.register');
                 });
             });
         } else {
@@ -31,7 +31,7 @@
               }
 
               event.preventDefault();
-              $state.go('main');
+              $state.go('main.welcome');
             });
         }
       });

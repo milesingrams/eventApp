@@ -14,6 +14,6 @@
     }
   }
 
-  angular.module('eventApp.admin')
+  angular.module('eventApp')
     .controller('AdminController', AdminController);
 })();
