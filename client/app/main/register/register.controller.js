@@ -40,7 +40,7 @@
               password: ctrl.password
             })
             .then(() => {
-              $state.go('main.welcome');
+              $state.go('events');
             })
             .catch(err => {
               ctrl.errorMessage = err.message;
@@ -54,7 +54,7 @@
               password: ctrl.password
             })
             .then(() => {
-              $state.go('main.welcome');
+              $state.go('events');
             })
             .catch(err => {
               ctrl.errorMessage = err.message;

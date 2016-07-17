@@ -1,30 +1,28 @@
-<div>
-  <h1 class="page-name">Sign In or Register</h1>
-  <form class="login-inputs" name="form" ng-submit="registerCtrl.go(form)" novalidate>
-    <div class="login-input-wrap">
-      <input id="email-input" type="email" name="email" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.email.$error)}" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()" required/>
-      <label class="login-input-label" for="email-input">Email</label>
-    </div>
-    <div class="login-input-wrap">
-      <input id="password-input" type="password" name="password" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.password.$error)}" ng-minlength="6" ng-model="registerCtrl.password" required/>
-      <label class="login-input-label" for="password-input">Password</label>
-      <p class="text-center login-error-text input-error-text" ng-if="form.password.$error.minlength">
-        Your password must be at least 6 characters long.
-      </p>
-    </div>
-    <div class="login-input-wrap" ng-if="!registerCtrl.userExists">
-      <input id="name-input" type="text" name="name" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.name.$error)}" ng-model="registerCtrl.name" required/>
-      <label class="login-input-label" for="name-input">Name</label>
-    </div>
-    <p class="text-center login-error-text" ng-if="registerCtrl.errorMessage">
-      {{registerCtrl.errorMessage}}
+<h1 class="page-name">Sign In or Register</h1>
+<form class="login-inputs" name="form" ng-submit="registerCtrl.go(form)" novalidate>
+  <div class="login-input-wrap">
+    <input id="email-input" type="email" name="email" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.email.$error)}" ng-model="registerCtrl.email" ng-blur="registerCtrl.checkEmail()" required/>
+    <label class="login-input-label" for="email-input">Email</label>
+  </div>
+  <div class="login-input-wrap">
+    <input id="password-input" type="password" name="password" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.password.$error)}" ng-minlength="6" ng-model="registerCtrl.password" required/>
+    <label class="login-input-label" for="password-input">Password</label>
+    <p class="text-center login-error-text input-error-text" ng-if="form.password.$error.minlength">
+      Your password must be at least 6 characters long.
     </p>
-    <p class="text-center" ng-if="!registerCtrl.userExists">
-      We noticed you are new here, thanks for joining EventApp!
-    </p>
-    <div class="register-buttons button-group-center">
-      <button class="ea-button ea-button back-button" ng-click="registerCtrl.goWelcome()">Back</button>
-      <button class="ea-button ea-button register-button" type="submit" ng-disabled="form.$invalid">Go!</button>
-    </div>
-  </form>
-</div>
+  </div>
+  <div class="login-input-wrap" ng-if="!registerCtrl.userExists">
+    <input id="name-input" type="text" name="name" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.name.$error)}" ng-model="registerCtrl.name" required/>
+    <label class="login-input-label" for="name-input">Name</label>
+  </div>
+  <p class="text-center login-error-text" ng-if="registerCtrl.errorMessage">
+    {{registerCtrl.errorMessage}}
+  </p>
+  <p class="text-center" ng-if="!registerCtrl.userExists">
+    We noticed you are new here, thanks for joining EventApp!
+  </p>
+  <div class="register-buttons button-group-center">
+    <button class="ea-button ea-button back-button" ng-click="registerCtrl.goWelcome()">Back</button>
+    <button class="ea-button ea-button register-button" type="submit" ng-disabled="form.$invalid">Go!</button>
+  </div>
+</form>
