@@ -6,7 +6,7 @@
    * The Util service is for thin, globally reusable, utility functions
    */
   function UtilService($window) {
-    var Util = {
+    let Util = {
       /**
        * Return a callback or noop function
        *
@@ -24,7 +24,7 @@
        * @return {Object}     - the parsed url, anchor element
        */
       urlParse(url) {
-        var a = document.createElement('a');
+        let a = document.createElement('a');
         a.href = url;
 
         // Special treatment for IE, see http://stackoverflow.com/a/13405933 for details

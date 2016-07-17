@@ -5,7 +5,7 @@
   class MainController {
     constructor() {
 
-      var ctrl = this;
+      let ctrl = this;
 
     }
   }

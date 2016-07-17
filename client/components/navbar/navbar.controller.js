@@ -1,15 +1,12 @@
 'use strict';
 
 class NavbarController {
-  //end-non-standard
+  constructor (Auth) {
 
-  //start-non-standard
-  constructor(Auth) {
-    this.isLoggedIn = Auth.isLoggedIn;
-    this.isAdmin = Auth.isAdmin;
-    this.getCurrentUser = Auth.getCurrentUser;
+    let ctrl = this;
+    ctrl.isLoggedIn = Auth.isLoggedIn;
+    ctrl.getCurrentUser = Auth.getCurrentUser;
   }
-
 }
 
 angular.module('eventApp')

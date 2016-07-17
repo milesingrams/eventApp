@@ -5,7 +5,7 @@
   class RegisterController {
     constructor($http, $state, Auth) {
 
-      var ctrl = this;
+      let ctrl = this;
 
       ctrl.email = '';
       ctrl.password = '';

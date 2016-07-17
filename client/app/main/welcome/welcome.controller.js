@@ -5,7 +5,7 @@
   class WelcomeController {
     constructor($state) {
 
-      var ctrl = this;
+      let ctrl = this;
 
       ctrl.goRegister = function () {
         $state.go('main.register');

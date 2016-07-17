@@ -3,7 +3,7 @@
 (function() {
 
   function authInterceptor($rootScope, $q, $cookies, $injector, Util) {
-    var state;
+    let state;
     return {
       // Add authorization token to headers
       request(config) {
