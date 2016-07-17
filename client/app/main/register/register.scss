@@ -73,4 +73,7 @@
 .register-button {
   background-color: $blue;
   color: white;
+  &:hover {
+    background-color: darken($blue, 5%);
+  }
 }
