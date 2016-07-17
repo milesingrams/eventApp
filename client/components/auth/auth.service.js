@@ -20,10 +20,7 @@
        * @param  {Function} callback - optional, function(error, user)
        * @return {Promise}
        */
-      login({
-        email,
-        password
-      }, callback) {
+      login({email, password}, callback) {
         return $http.post('/auth/local', {
             email: email,
             password: password

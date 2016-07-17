@@ -1,2 +1,4 @@
-<div ng-if="nav.isLoggedIn()">
+<div ng-controller="NavbarController">
+  {{nav.getCurrentUser()}}
+  <button ng-click="nav.logout()">logout</button>
 </div>

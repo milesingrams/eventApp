@@ -6,6 +6,7 @@ class NavbarController {
     let ctrl = this;
     ctrl.isLoggedIn = Auth.isLoggedIn;
     ctrl.getCurrentUser = Auth.getCurrentUser;
+    ctrl.logout = Auth.logout;
   }
 }
 
