@@ -1,4 +1,10 @@
-<div ng-controller="NavbarController">
-  {{nav.getCurrentUser()}}
-  <button ng-click="nav.logout()">logout</button>
-</div>
+<nav class="app-navbar" ng-controller="NavbarController">
+  <div class="app-logo">
+    <span>EVENTAPP</span>
+  </div>
+  <div class="user-details" ng-if="nav.isLoggedIn()">
+    <span class="user-name">{{nav.getCurrentUser().name}}</span>
+    &bull;
+    <button ng-click="nav.logout()">Logout</button>
+  </div>
+</nav>
