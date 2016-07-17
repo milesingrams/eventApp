@@ -2,9 +2,11 @@
   height: 40px;
   padding: 10px 20px;
   line-height: 1;
-  background-color: $grayLighter;
+  background-color: transparentize($grayLighter, .15);
   border-radius: 20px;
+  transition: color .2s ease-out, background-color .2s ease-out, box-shadow .35s ease-out;
   &:hover {
+    box-shadow: 0 5px 30px $blue;
     background-color: $blue;
     color: white;
     border: none;
@@ -15,7 +17,8 @@
   height: 40px;
   padding: 10px 20px;
   line-height: 1;
-  border: 1px solid $gray;
+  color: transparentize(black, .35);
+  border: 1px solid transparentize(black, .35);
   border-radius: 20px;
   display: block;
   text-decoration: none;
