@@ -61,7 +61,7 @@
   &:focus {
     + .login-input-label {
       top: -10px;
-      color: $blue;
+      color: $brand-main;
     }
   }
 }
@@ -71,6 +71,5 @@
 }
 
 .register-button {
-  background-color: $blue;
-  color: white;
+
 }

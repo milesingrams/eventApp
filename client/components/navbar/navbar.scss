@@ -3,11 +3,14 @@
   @include clearfix;
 }
 
-.app-logo {
+.app-logo a {
   height: 60px;
   float: left;
   font-weight: 900;
   font-size: 24px;
+  color: $brand-main;
+  text-decoration: none !important;
+  letter-spacing: 1px;
   display: flex;
   align-items: center;
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eventApp', ['ngCookies', 'ngResource', 'ngSanitize', 'btford.socket-io', 'ui.router', 'validation.match', 'ngMap'
+angular.module('eventApp', ['ngCookies', 'ngResource', 'ngSanitize', 'btford.socket-io', 'ui.router', 'validation.match', 'ngAnimate', 'ngMap'
   ])
   .config(function($urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider.otherwise('/');
