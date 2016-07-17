@@ -2,12 +2,13 @@
   height: 40px;
   padding: 10px 20px;
   line-height: 1;
-  background-color: transparentize($grayLighter, .15);
+  background-color: $brand-main;
+  color: white;
   border-radius: 20px;
   transition: color .2s ease-out, background-color .2s ease-out, box-shadow .35s ease-out;
   &:hover {
-    box-shadow: 0 5px 30px $blue;
-    background-color: $blue;
+    box-shadow: 0 5px 30px transparentize($brand-main, .35);
+    background-color: $brand-main;
     color: white;
     border: none;
   }
@@ -26,6 +27,22 @@
   background-color: transparent;
 }
 
+.ea-button-gray {
+  background-color: transparentize($grayLighter, .15);
+  color: transparentize(black, .4);
+  &:hover {
+    background-color: transparentize($grayMed, .15);
+    box-shadow: none;
+  }
+}
+
+.ea-button-blue {
+
+  &:hover {
+    background-color: darken($brand-main, 5%);
+  }
+}
+
 .input-outline {
   height: 40px;
   padding: 10px 20px;
@@ -34,7 +51,7 @@
   border-radius: 20px;
   background-color: transparent;
   &:focus {
-    border-color: $blue;
+    border-color: $brand-main;
   }
 }
 
