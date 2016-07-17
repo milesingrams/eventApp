@@ -2,6 +2,11 @@
   color: $red;
 }
 
+.input-error-text {
+  font-size: .9rem;
+  margin-top: 5px;
+}
+
 .login-inputs {
   margin-top: 50px;
 }
@@ -10,6 +15,7 @@
   position: relative;
   width: 400px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .login-input-label {
@@ -32,7 +38,6 @@
   text-align: center;
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px;
   width: 100%;
   position: relative;
   transition: all .2s ease-in-out;
@@ -42,7 +47,7 @@
       top: 9px;
     }
   }
-  &.error {
+  &.error, &.ng-invalid:not(.ng-empty) {
     border-color: $red;
     + .login-input-label {
       color: $red;

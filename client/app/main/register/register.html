@@ -8,6 +8,9 @@
     <div class="login-input-wrap">
       <input id="password-input" type="password" name="password" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.password.$error)}" ng-minlength="6" ng-model="registerCtrl.password" required/>
       <label class="login-input-label" for="password-input">Password</label>
+      <p class="text-center login-error-text input-error-text" ng-if="form.password.$error.minlength">
+        Your password must be at least 6 characters long.
+      </p>
     </div>
     <div class="login-input-wrap" ng-if="!registerCtrl.userExists">
       <input id="name-input" type="text" name="name" class="login-input input-outline" ng-class="{'error': registerCtrl.submitted && !registerCtrl.isEmpty(form.name.$error)}" ng-model="registerCtrl.name" required/>
@@ -20,8 +23,8 @@
       We noticed you are new here, thanks for joining EventApp!
     </p>
     <div class="register-buttons button-group-center">
-      <button class="ea-button ea-button-outline back-button" ng-click="registerCtrl.goWelcome()">Back</button>
-      <button class="ea-button ea-button-outline register-button" type="submit">Go!</button>
+      <button class="ea-button ea-button back-button" ng-click="registerCtrl.goWelcome()">Back</button>
+      <button class="ea-button ea-button register-button" type="submit" ng-disabled="form.$invalid">Go!</button>
     </div>
   </form>
 </div>
